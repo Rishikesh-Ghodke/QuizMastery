@@ -1,1 +1,1 @@
-# QuizMastery 
+# Quiz

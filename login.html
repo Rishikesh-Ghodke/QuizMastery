@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | QuizMastery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-image">
+        <div class="login-container">
+            <h1>Welcome to QuizMastery</h1>
+            <div class="tab-container">
+                <button class="tab-button active" onclick="showLogin()">Login</button>
+                <button class="tab-button" onclick="showSignUp()">Sign Up</button>
+            </div>
+            <div id="login-form" class="form-content active">
+                <form action="./index.html" method="post">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <a href="index.html" class="btn login">Login</a>
+                </form>
+            </div>
+            <div id="signup-form" class="form-content">
+                <form action="your-signup-route-here" method="post">
+                    <div class="form-group">
+                        <label for="signup-email">Email:</label>
+                        <input type="email" id="signup-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password:</label>
+                        <input type="password" id="signup-password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 QuizMastery. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        function showLogin() {
+            document.getElementById('login-form').classList.add('active');
+            document.getElementById('signup-form').classList.remove('active');
+            document.querySelector('.tab-button.active').classList.remove('active');
+            document.querySelector('.tab-button:nth-child(1)').classList.add('active');
+        }
+
+        function showSignUp() {
+            document.getElementById('signup-form').classList.add('active');
+            document.getElementById('login-form').classList.remove('active');
+            document.querySelector('.tab-button.active').classList.remove('active');
+            document.querySelector('.tab-button:nth-child(2)').classList.add('active');
+        }
+    </script>
+</body>
+</html>
